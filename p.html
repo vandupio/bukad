@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bukad Verde Suites</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#da8ee7]/20 text-gray-800 relative overflow-x-hidden">
+
+  <!-- Falling Leaves Background (Left Side Only) -->
+  <div class="pointer-events-none fixed inset-y-0 left-0 w-1/3 z-0 overflow-hidden">
+    <div class="leaves-left">
+      <span style="color:#4c00b0">🍃</span>
+      <span style="color:#a100cd">🍂</span>
+      <span style="color:#4c00b0">🍃</span>
+      <span style="color:#a100cd">🍂</span>
+      <span style="color:#4c00b0">🍃</span>
+      <span style="color:#a100cd">🍂</span>
+      <span style="color:#4c00b0">🍃</span>
+      <span style="color:#a100cd">🍂</span>
+      <span style="color:#4c00b0">🍃</span>
+      <span style="color:#a100cd">🍂</span>
+    </div>
+  </div>
+
+  <!-- Hero with Background Slider -->
+<section class="relative h-screen overflow-hidden">
+  <!-- Slider -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="flex animate-scroll h-full">
+      <div class="w-1/3 h-full"><img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1400&q=80" class="w-full h-full object-cover"></div>
+      <div class="w-1/3 h-full"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1400&q=80" class="w-full h-full object-cover"></div>
+      <div class="w-1/3 h-full"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1400&q=80" class="w-full h-full object-cover"></div>
+      <div class="w-1/3 h-full"><img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1400&q=80" class="w-full h-full object-cover"></div>
+      <div class="w-1/3 h-full"><img src="https://images.unsplash.com/photo-1518655048521-f130df041f66?auto=format&fit=crop&w=1400&q=80" class="w-full h-full object-cover"></div>
+      <div class="w-1/3 h-full"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=80" class="w-full h-full object-cover"></div>
+
+      <!-- duplicate -->
+      <div class="w-1/3 h-full"><img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1400&q=80" class="w-full h-full object-cover"></div>
+      <div class="w-1/3 h-full"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1400&q=80" class="w-full h-full object-cover"></div>
+      <div class="w-1/3 h-full"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1400&q=80" class="w-full h-full object-cover"></div>
+      <div class="w-1/3 h-full"><img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1400&q=80" class="w-full h-full object-cover"></div>
+      <div class="w-1/3 h-full"><img src="https://images.unsplash.com/photo-1518655048521-f130df041f66?auto=format&fit=crop&w=1400&q=80" class="w-full h-full object-cover"></div>
+      <div class="w-1/3 h-full"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=80" class="w-full h-full object-cover"></div>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/50"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 flex flex-col justify-center items-center text-center px-6 h-full">
+    <h1 class="text-5xl md:text-7xl font-serif text-yellow-400 mb-4">Bukad Verde Suites</h1>
+    <p class="text-lg md:text-xl max-w-2xl text-white">Where the forest opens, and the spirits rest.</p>
+    <button class="mt-8 px-6 py-3 bg-yellow-500 text-black rounded-2xl shadow-lg hover:bg-yellow-600">Book Now</button>
+  </div>
+</section>
+
+<style>
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-scroll {
+  width: max-content;
+  animation: scroll 50s linear infinite;
+}
+</style>
+
+<style>
+  /* Theme Colors */
+  :root {
+    --deep-purple: #4c00b0;
+    --mid-purple: #a100cd;
+    --light-purple: #da8ee7;
+    --gold: #d4af37;
+  }
+
+  /* Falling Leaves (Left Side Only) */
+  /* Enhanced Falling Leaves (Wind Effect) */
+.leaves-left {
+  position: absolute;
+  top: -10%;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  z-index: 1;
+}
+
+.leaves-left span {
+  position: absolute;
+  font-size: 22px;
+  opacity: 0.35;
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.2));
+  animation: fall-random linear infinite;
+}
+
+/* Individual random positions */
+.leaves-left span:nth-child(1) { left: 5%; animation-duration: 12s; }
+.leaves-left span:nth-child(2) { left: 15%; animation-duration: 18s; }
+.leaves-left span:nth-child(3) { left: 25%; animation-duration: 14s; }
+.leaves-left span:nth-child(4) { left: 35%; animation-duration: 20s; }
+.leaves-left span:nth-child(5) { left: 45%; animation-duration: 16s; }
+.leaves-left span:nth-child(6) { left: 10%; animation-duration: 22s; }
+.leaves-left span:nth-child(7) { left: 30%; animation-duration: 15s; }
+.leaves-left span:nth-child(8) { left: 50%; animation-duration: 19s; }
+.leaves-left span:nth-child(9) { left: 20%; animation-duration: 17s; }
+.leaves-left span:nth-child(10) { left: 40%; animation-duration: 13s; }
+
+@keyframes fall-random {
+  0% {
+    transform: translateY(-10%) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(25%) translateX(20px) rotate(30deg);
+  }
+  50% {
+    transform: translateY(50%) translateX(-15px) rotate(60deg);
+  }
+  75% {
+    transform: translateY(75%) translateX(25px) rotate(120deg);
+  }
+  100% {
+    transform: translateY(110%) translateX(-10px) rotate(180deg);
+  }
+}
+    100% { transform: translateX(30px) rotate(20deg); }
+  }
+    100% { transform: translateY(100%) rotate(360deg); }
+  }
+
+  /* Gold accents */
+  .gold-text { color: var(--gold); }
+  .gold-bg { background-color: var(--gold); }
+
+  /* Shadow depth */
+  .deep-shadow {
+    box-shadow: 0 10px 30px rgba(76, 0, 176, 0.4);
+  }
+</style>
+
+            
+
+  <style>
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-scroll {
+      width: max-content;
+      animation: scroll 40s linear infinite;
+    }
+  </style>
+
+  <!-- About -->
+  <section class="py-16 px-6 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-semibold mb-6">Our Story</h2>
+    <p class="leading-relaxed">
+      Hidden just beyond the busy paths of Siquijor, Bukad Verde Suites is a quiet retreat surrounded by tall trees and calm الهواء.
+      Inspired by Filipino folklore, each space is shaped by stories of diwata, guardians, and gentle winds.
+      Here, nature is not just a backdrop—it is the experience.
+    </p>
+  </section>
+
+  <!-- Rooms -->
+  <section class="py-16 bg-white px-6">
+    <h2 class="text-3xl text-center font-semibold mb-12">Rooms & Suites</h2>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="p-6 border rounded-2xl shadow">
+        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80" class="w-full h-40 object-cover rounded-xl mb-4">
+        <h3 class="text-xl font-bold mb-2">Barkada Suites</h3>
+        <p>Kapre • Tikbalang • Bagani • Mandirigma • Anitun Tabu</p>
+      </div>
+
+      <div class="p-6 border rounded-2xl shadow">
+        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80" class="w-full h-40 object-cover rounded-xl mb-4">
+        <h3 class="text-xl font-bold mb-2">Family Suites</h3>
+        <p>Mayari • Haliya • Tala</p>
+      </div>
+
+      <div class="p-6 border rounded-2xl shadow">
+        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80" class="w-full h-40 object-cover rounded-xl mb-4">
+        <h3 class="text-xl font-bold mb-2">Verde Rooms</h3>
+        <p>Diwata • Amihan • Payapa • Luntian • Himaya • Ligaya</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="py-16 px-6 text-center max-w-4xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-6">The Experience</h2>
+    <p class="leading-relaxed">
+      Wake up to the sound of leaves, not traffic. Walk paths that feel hidden, yet welcoming.
+      Just minutes from Siquijor's lively spots, yet far enough to truly rest.
+    </p>
+  </section>
+
+  <!-- Explore Siquijor -->
+  <section class="py-16 bg-white px-6">
+    <h2 class="text-3xl text-center font-semibold mb-12">Explore Siquijor</h2>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="rounded-2xl overflow-hidden shadow">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold text-lg">Salagdoong Beach</h3>
+          <p class="text-sm">Crystal waters and cliff jumps for the adventurous.</p>
+        </div>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden shadow">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold text-lg">Cambugahay Falls</h3>
+          <p class="text-sm">Tiered waterfalls with turquoise pools and rope swings.</p>
+        </div>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden shadow">
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold text-lg">Old Balete Tree</h3>
+          <p class="text-sm">A mystical tree said to be home to spirits and natural spring.</p>
+        </div>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden shadow">
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold text-lg">Paliton Beach</h3>
+          <p class="text-sm">Soft sand, coconut trees, and unforgettable sunsets.</p>
+        </div>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden shadow">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold text-lg">Mt. Bandilaan</h3>
+          <p class="text-sm">The island’s highest point with panoramic jungle views.</p>
+        </div>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden shadow">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold text-lg">Lazi Church & Convent</h3>
+          <p class="text-sm">Historic Spanish-era architecture and cultural heritage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 text-center text-sm text-gray-500">
+    <p>© 2026 Bukad Verde Suites • Siquijor Island, Philippines</p>
+  </footer>
+
+  
+
+</body>
+</html>
